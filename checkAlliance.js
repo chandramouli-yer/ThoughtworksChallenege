@@ -1,4 +1,5 @@
 function checkAlliance(kingdom, secretMessage) {
+    console.log(kingdom,secretMessage);
     let victories = 0;
     let alliances = new Array();
     switch (kingdom) {
