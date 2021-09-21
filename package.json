@@ -1,0 +1,11 @@
+{
+  "name": "a_golden_crown",
+  "version": "1.0.0",
+  "description": "Solution for GeekTrust's A Golden Crown Challange",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chandramouli",
+  "license": "ISC"
+}
