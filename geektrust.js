@@ -23,13 +23,13 @@ for (let i = 0; i < inputData.length; i++) {
     let message = inputData[i].split(' ');
     let kingdom = message[0];
     let secretText = message[1].toUpperCase();
-    // console.log("Kingdom",kingdom);
-    // console.log("Emblem",Emblem[kingdom])
+     console.log("Kingdom",kingdom);
+    console.log("Emblem",Emblem[kingdom])
     let secretMessage = decipherSecretMessage(Emblem[kingdom], secretText);
-    allianceResult = checkAlliance(kingdom, secretMessage, Emblem[kingdom]);
+    allianceResult = checkAlliance(kingdom, secretMessage);
     console.log("Alliance Result",allianceResult)
     allianceCount =allianceCount+ allianceResult[0];
-    // console.log("No of victories:", allianceCount);
+     console.log("No of victories:", allianceCount);
     alliances.push(allianceResult[1]);
 };
 
