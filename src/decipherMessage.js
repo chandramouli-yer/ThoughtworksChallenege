@@ -5,7 +5,7 @@ const decipherSecretMessage=(key, message) => {
     for (let i = 0; i < message.length; i++) {
         decipheredMessage += originalCharacter(message[i], cipherKey)
     }
-    console.log(key,message,decipheredMessage);
+  //  console.log(key,message,decipheredMessage);
     return decipheredMessage;
 }
 const originalCharacter=(letter, cipherLength) =>{

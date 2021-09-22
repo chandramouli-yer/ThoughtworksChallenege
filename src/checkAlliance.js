@@ -1,5 +1,5 @@
 const checkAlliance=(kingdom, secretMessage) =>{
-    console.log(kingdom,secretMessage);
+   // console.log(kingdom,secretMessage);
     let victories = 0;
     let alliances = new Array();
     let Kingdoms={
@@ -14,14 +14,14 @@ const checkAlliance=(kingdom, secretMessage) =>{
             if (isLandKingdomAllied(secretMessage)) {
                 victories = victories + 1;
                 alliances.push(Kingdoms.Land)
-                console.log("victories",victories)
+              //  console.log("victories",victories)
             }
             break;
         case Kingdoms.water:
             if (isWaterKingdomAllied(secretMessage)) {
                 victories = victories + 1;
                 alliances.push(Kingdoms.water)
-                console.log("victories",victories)
+                //console.log("victories",victories)
 
             }
             break;
@@ -29,17 +29,17 @@ const checkAlliance=(kingdom, secretMessage) =>{
             if (isIceKingdomAllied(secretMessage)) {
                 victories = victories + 1;
                 alliances.push(Kingdoms.Ice)
-                console.log("victories",victories)
+                //console.log("victories",victories)
 
             }
             break;
         case Kingdoms.Air:
-            console.log("Inside Air");
+           // console.log("Inside Air");
             if (isAirKingdomAllied(secretMessage)) {
-                console.log("Deep inside if AIR")
+             //   console.log("Deep inside if AIR")
                 victories = victories + 1;
                 alliances.push(Kingdoms.Air)
-                console.log("victories",victories)
+               // console.log("victories",victories)
 
             }
             break;
@@ -47,7 +47,7 @@ const checkAlliance=(kingdom, secretMessage) =>{
             if (isFireKingdomAllied(secretMessage)) {
                 victories = victories + 1;
                 alliances.push(Kingdoms.Fire)
-                console.log("victories",victories)
+                //console.log("victories",victories)
 
             }
             break;
@@ -63,7 +63,7 @@ const isIceKingdomAllied=(message) =>{
         (message.match(/T/g) || []).length >= 1 &&
         (message.match(/H/g) || []).length >= 1
     ) {
-        console.log("isIce");
+        //console.log("isIce");
         return 1;
     };
 }
@@ -74,7 +74,7 @@ const isAirKingdomAllied=(message) => {
         (message.match(/W/g) || []).length >= 1 &&
         (message.match(/L/g) || []).length >= 1
     ) {
-        console.log("isAir");
+        //console.log("isAir");
         return 1;
     }
     return 0;
@@ -89,7 +89,7 @@ const isWaterKingdomAllied=(message) =>{
         (message.match(/T/g) || []).length >= 1 &&
         (message.match(/C/g) || []).length >= 1
     ) {
-        console.log("isWater");
+        //console.log("isWater");
         return 1;
     }
     return 0;
@@ -104,7 +104,7 @@ const isFireKingdomAllied=(message) =>{
         (message.match(/O/g) || []).length >= 1 &&
         (message.match(/N/g) || []).length >= 1
     ) {
-        console.log("isFire");
+        //console.log("isFire");
         return 1;
     }
     return 0;
@@ -117,7 +117,7 @@ const isLandKingdomAllied=(message) =>{
         (message.match(/N/g) || []).length >= 1 &&
         (message.match(/D/g) || []).length >= 1
     ) {
-        console.log("isLand");
+        //console.log("isLand");
         return 1;
     }
     return 0;

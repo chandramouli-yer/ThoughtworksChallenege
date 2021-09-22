@@ -18,22 +18,34 @@ let inputData = ReadFile(filename);
 
 let allianceCount = 0;
 let alliances = [];
+let messageWithSpaces=[]
+let secretText="";
+let spaceCount=2;
+let victoryCount=3;
 
 for (let i = 0; i < inputData.length; i++) {
     let message = inputData[i].split(' ');
     let kingdom = message[0];
-    let secretText = message[1].toUpperCase();
-     console.log("Kingdom",kingdom);
-    console.log("Emblem",Emblem[kingdom])
+    if(message.length>spaceCount){
+        for(let i=1;i<message.length;i++){
+            messageWithSpaces.push(message[i]);
+        }
+        secretText=messageWithSpaces.join('').toUpperCase();
+    }else{
+        secretText = message[1].toUpperCase();
+    }
+     
+    // console.log("Kingdom",kingdom);
+    //console.log("Emblem",Emblem[kingdom])
     let secretMessage = decipherSecretMessage(Emblem[kingdom], secretText);
     allianceResult = checkAlliance(kingdom, secretMessage);
-    console.log("Alliance Result",allianceResult)
+    //console.log("Alliance Result",allianceResult)
     allianceCount =allianceCount+ allianceResult[0];
-     console.log("No of victories:", allianceCount);
+    // console.log("No of victories:", allianceCount);
     alliances.push(allianceResult[1]);
 };
 
-if(allianceCount>=3){
+if(allianceCount>=victoryCount){
     let allies="SPACE ";
     for(let i=0;i<alliances.length;i++){
         if(alliances[i].length){
@@ -42,7 +54,7 @@ if(allianceCount>=3){
         }
         
     }
-    console.log(allies);
+    console.log(allies.trim());
 }else{
     console.log("NONE")
 }

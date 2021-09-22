@@ -1,4 +1,4 @@
-const decipheredMessage = require('../decipherMessage');
+const decipheredMessage = require('../src/decipherMessage');
 
 describe("DecipherMessage function", () => {
     test("Deciphers Land Kindom messages", () => {
