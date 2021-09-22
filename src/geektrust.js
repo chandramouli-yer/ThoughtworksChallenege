@@ -1,6 +1,7 @@
 const ReadFile = require('./ReadFile.js');
 const decipherSecretMessage = require('./decipherMessage.js')
 const checkAlliance = require('./checkAlliance.js')
+const hasUniqueAllies=require('../src/hasUniqueAllies.js')
 
 const filename = process.argv[2];
 
@@ -39,7 +40,7 @@ for (let i = 0; i < inputData.length; i++) {
     alliances.push(allianceResult[1]);
 };
 
-if(allianceCount>=victoryCount){
+if(allianceCount>=victoryCount&&hasUniqueAllies(alliances)){
     let allies="SPACE ";
     for(let i=0;i<alliances.length;i++){
         if(alliances[i].length){

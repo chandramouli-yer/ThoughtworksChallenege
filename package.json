@@ -1,7 +1,7 @@
 {
   "name": "a_golden_crown",
   "version": "1.0.0",
-  "description": "Solution for GeekTrust's A Golden Crown Challange",
+  "description": "Solution for GeekTrust's Tame of Thrones Challange",
   "main": "index.js",
   "scripts": {
     "start": "node src/geektrust.js",

@@ -1,4 +1,4 @@
-**This is the Solution for Geektrust's "A Golden Crown" Backend Challenge.**
+**This is the Solution for Geektrust's "Tame of Thrones" Backend Challenge.**
 
 # Steps to run the solution
  - Unzip the folder named golden_crown.zip
