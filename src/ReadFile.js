@@ -1,11 +1,14 @@
 const fs = require('fs')
+let newLine='\n';
+let carriageReturn='\r'
+let charSet='utf8'
 const ReadFile=(fileName) =>{
     try {
-        const data = fs.readFileSync(fileName, 'utf8')
+        const data = fs.readFileSync(fileName, charSet)
         let content = [];
         let text = '';
         for (let i = 0; i < data.length; i++) {
-            if (data[i] === '\n' || data[i] === '\r') {
+            if (data[i] === newLine || data[i] === carriageReturn) {
                 content.push(text);
                 text = ''
             }
