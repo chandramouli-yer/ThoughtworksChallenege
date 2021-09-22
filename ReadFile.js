@@ -1,5 +1,5 @@
 const fs = require('fs')
-function ReadFile(fileName) {
+const ReadFile=(fileName) =>{
     try {
         const data = fs.readFileSync(fileName, 'utf8')
         let content = [];

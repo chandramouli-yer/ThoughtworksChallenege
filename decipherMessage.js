@@ -1,4 +1,4 @@
-function decipherSecretMessage(key, message) {
+const decipherSecretMessage=(key, message) => {
 
     let cipherKey = key.length;
     let decipheredMessage = "";
@@ -8,7 +8,7 @@ function decipherSecretMessage(key, message) {
    // console.log(message,decipheredMessage);
     return decipheredMessage;
 }
-function originalCharacter(letter, cipherLength) {
+const originalCharacter=(letter, cipherLength) =>{
     return String.fromCharCode((letter.charCodeAt(0) + (26 - cipherLength) - 65) % 26 + 65);
 }
 module.exports = decipherSecretMessage;

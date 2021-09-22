@@ -4,6 +4,7 @@
   "description": "Solution for GeekTrust's A Golden Crown Challange",
   "main": "index.js",
   "scripts": {
+    "start":"node geektrust.js",
     "test": "jest"
   },
   "author": "Chandramouli",

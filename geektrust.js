@@ -4,7 +4,7 @@ const decipherSecretMessage = require('./decipherMessage.js')
 
 const checkAlliance = require('./checkAlliance.js')
 
-let fileName="test.txt";
+const filename = process.argv[2];
 
 const Emblem = {
     SPACE: 'Gorilla',
@@ -14,7 +14,7 @@ const Emblem = {
     AIR: 'Owl',
     FIRE: 'Dragon'
 };
-let inputData = ReadFile(fileName);
+let inputData = ReadFile(filename);
 
 let allianceCount = 0;
 let alliances = [];

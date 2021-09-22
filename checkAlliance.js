@@ -1,16 +1,23 @@
-function checkAlliance(kingdom, secretMessage) {
+const checkAlliance=(kingdom, secretMessage) =>{
     console.log(kingdom,secretMessage);
     let victories = 0;
     let alliances = new Array();
+    let Kingdoms={
+        Land:"LAND",
+        water:"WATER",
+        Ice:"ICE",
+        Air:"AIR",
+        Fire:"FIRE"
+    }
     switch (kingdom) {
-        case "LAND":
+        case Kingdoms.Land:
             if (isLandKingdomAllied(secretMessage)) {
                 victories = victories + 1;
                 alliances.push("LAND")
                 console.log("victories",victories)
             }
             break;
-        case "WATER":
+        case Kingdoms.water:
             if (isWaterKingdomAllied(secretMessage)) {
                 victories = victories + 1;
                 alliances.push("WATER")
@@ -18,7 +25,7 @@ function checkAlliance(kingdom, secretMessage) {
 
             }
             break;
-        case "ICE":
+        case Kingdoms.Ice:
             if (isIceKingdomAllied(secretMessage)) {
                 victories = victories + 1;
                 alliances.push("ICE")
@@ -26,7 +33,7 @@ function checkAlliance(kingdom, secretMessage) {
 
             }
             break;
-        case "AIR":
+        case Kingdoms.Air:
             if (isAirKingdomAllied(secretMessage)) {
                 victories = victories + 1;
                 alliances.push("AIR")
@@ -34,7 +41,7 @@ function checkAlliance(kingdom, secretMessage) {
 
             }
             break;
-        case "FIRE":
+        case Kingdoms.Fire:
             if (isFireKingdomAllied(secretMessage)) {
                 victories = victories + 1;
                 alliances.push("FIRE")
@@ -47,7 +54,7 @@ function checkAlliance(kingdom, secretMessage) {
     return [victories, alliances];
 }
 
-function isIceKingdomAllied(message) {
+const isIceKingdomAllied=(message) =>{
     if ((message.match(/M/g) || []).length == 3 &&
         (message.match(/A/g) || []).length == 1 &&
         (message.match(/O/g) || []).length == 1 &&
@@ -59,7 +66,7 @@ function isIceKingdomAllied(message) {
     };
 }
 
-function isAirKingdomAllied(message) {
+const isAirKingdomAllied=(message) => {
 
     if ((message.match(/O/g) || []).length == 1 &&
         (message.match(/W/g) || []).length == 1 &&
@@ -71,7 +78,7 @@ function isAirKingdomAllied(message) {
     return 0;
 }
 
-function isWaterKingdomAllied(message) {
+const isWaterKingdomAllied=(message) =>{
 
     if ((message.match(/P/g) || []).length == 1 &&
         (message.match(/U/g) || []).length == 1 &&
@@ -86,7 +93,7 @@ function isWaterKingdomAllied(message) {
     return 0;
 }
 
-function isFireKingdomAllied(message) {
+const isFireKingdomAllied=(message) =>{
 
     if ((message.match(/D/g) || []).length == 1 &&
         (message.match(/R/g) || []).length == 1 &&
@@ -101,7 +108,7 @@ function isFireKingdomAllied(message) {
     return 0;
 }
 
-function isLandKingdomAllied(message) {
+const isLandKingdomAllied=(message) =>{
 
     if ((message.match(/P/g) || []).length == 1 &&
         (message.match(/A/g) || []).length == 2 &&
