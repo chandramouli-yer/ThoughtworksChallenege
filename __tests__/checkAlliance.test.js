@@ -1,4 +1,4 @@
-const checkAlliance=require('../checkAlliance');
+const checkAlliance=require('../src/checkAlliance');
 
 describe("checkAlliance function",()=>{
     test("Testing Alliance for ICE Kingdom",()=>{
