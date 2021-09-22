@@ -1,7 +1,7 @@
-This is the Solution for Geektrust's "A Golden Crown" Backend Challenge.
+This is the Solution for Geektrust's "A Golden Crown" Backend Challenge.\
 
-#Steps to run the solution
- -Unzip the folder named golden_crown.zip
+#Steps to run the solution\
+ -Unzip the folder named golden_crown.zip\
   -Run npm instal (to install all the dependencies)
   -Run npm start <absolute_path_to_input_file>
   -Run npm test(to execute test suite)
