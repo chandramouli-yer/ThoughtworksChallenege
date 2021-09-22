@@ -13,14 +13,14 @@ const checkAlliance=(kingdom, secretMessage) =>{
         case Kingdoms.Land:
             if (isLandKingdomAllied(secretMessage)) {
                 victories = victories + 1;
-                alliances.push("LAND")
+                alliances.push(Kingdoms.Land)
                 console.log("victories",victories)
             }
             break;
         case Kingdoms.water:
             if (isWaterKingdomAllied(secretMessage)) {
                 victories = victories + 1;
-                alliances.push("WATER")
+                alliances.push(Kingdoms.water)
                 console.log("victories",victories)
 
             }
@@ -28,7 +28,7 @@ const checkAlliance=(kingdom, secretMessage) =>{
         case Kingdoms.Ice:
             if (isIceKingdomAllied(secretMessage)) {
                 victories = victories + 1;
-                alliances.push("ICE")
+                alliances.push(Kingdoms.Ice)
                 console.log("victories",victories)
 
             }
@@ -38,7 +38,7 @@ const checkAlliance=(kingdom, secretMessage) =>{
             if (isAirKingdomAllied(secretMessage)) {
                 console.log("Deep inside if AIR")
                 victories = victories + 1;
-                alliances.push("AIR")
+                alliances.push(Kingdoms.Air)
                 console.log("victories",victories)
 
             }
@@ -46,7 +46,7 @@ const checkAlliance=(kingdom, secretMessage) =>{
         case Kingdoms.Fire:
             if (isFireKingdomAllied(secretMessage)) {
                 victories = victories + 1;
-                alliances.push("FIRE")
+                alliances.push(Kingdoms.Fire)
                 console.log("victories",victories)
 
             }
