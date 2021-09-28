@@ -1,4 +1,4 @@
-const decipherSecretMessage = (key, message) => {
+const decipherMessage = (key, message) => {
 
     let cipherKey = key.length;
     let decipheredMessage = "";
@@ -8,8 +8,8 @@ const decipherSecretMessage = (key, message) => {
     return decipheredMessage;
 }
 const originalCharacter = (letter, cipherLength) => {
-    let aplhabetCount = 26;
-    let asciiValueOfA = 65;
-    return String.fromCharCode((letter.charCodeAt(0) + (aplhabetCount - cipherLength) - asciiValueOfA) % aplhabetCount + asciiValueOfA);
+    const ALPHABET_COUNT = 26;
+    const ASCII_VALUE_OF_A = 65;
+    return String.fromCharCode((letter.charCodeAt(0) + (ALPHABET_COUNT - cipherLength) - ASCII_VALUE_OF_A) % ALPHABET_COUNT + ASCII_VALUE_OF_A);
 }
-module.exports = decipherSecretMessage;
+module.exports = decipherMessage;

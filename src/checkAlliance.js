@@ -1,9 +1,5 @@
-const checkAlliance = (kingdom, secretMessage) => {
-const isLandKingdomAllied=require('./isLandKingdomAllied.js');
-const isWaterKingdomAllied=require('./isWaterKingdomAllied.js');
-const isIceKingdomAllied=require('./isIceKingdomAllied.js');
-const isAirKingdomAllied=require('./isAirKingdomAllied.js');
-const isFireKingdomAllied=require('./isFireKingdomAllied.js');
+const checkAlliance = (kingdom, secretMessage,emblem) => {
+const check=require('./isKingdomAllied.js')
     let victories = 0;
     let alliances = new Array();
     let Kingdoms = {
@@ -15,34 +11,34 @@ const isFireKingdomAllied=require('./isFireKingdomAllied.js');
     }
     switch (kingdom) {
         case Kingdoms.Land:
-            if (isLandKingdomAllied(secretMessage)) {
+            if (check(emblem,secretMessage)) {
                 victories = victories + 1;
                 alliances.push(Kingdoms.Land)
             }
             break;
         case Kingdoms.water:
-            if (isWaterKingdomAllied(secretMessage)) {
+            if (check(emblem,secretMessage)) {
                 victories = victories + 1;
                 alliances.push(Kingdoms.water)
 
             }
             break;
         case Kingdoms.Ice:
-            if (isIceKingdomAllied(secretMessage)) {
+            if (check(emblem,secretMessage)) {
                 victories = victories + 1;
                 alliances.push(Kingdoms.Ice)
 
             }
             break;
         case Kingdoms.Air:
-            if (isAirKingdomAllied(secretMessage)) {
+            if (check(emblem,secretMessage)) {
                 victories = victories + 1;
                 alliances.push(Kingdoms.Air)
 
             }
             break;
         case Kingdoms.Fire:
-            if (isFireKingdomAllied(secretMessage)) {
+            if (check(emblem,secretMessage)) {
                 victories = victories + 1;
                 alliances.push(Kingdoms.Fire)
 
