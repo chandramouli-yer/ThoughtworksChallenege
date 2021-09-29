@@ -1,23 +1,15 @@
 {
-  "name": "tame_of_thrones",
+  "name": "a_golden_crown",
   "version": "1.0.0",
-  "description": "Solution for Geektrust's Tame of thrones challenge",
+  "description": "Solution for GeekTrust's Tame of Thrones Challange",
   "main": "geektrust.js",
   "scripts": {
     "start": "node src/geektrust.js",
-    "test": "npm test"
+    "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chandramouli-yer/ThoughtworksChallenege.git"
-  },
-  "author": "Chandramouli Yerraguntla",
+  "author": "Chandramouli",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/chandramouli-yer/ThoughtworksChallenege/issues"
-  },
-  "homepage": "https://github.com/chandramouli-yer/ThoughtworksChallenege#readme",
-  "devDependencies": {
-    "jest": "^27.2.2"
+  "dependencies": {
+    "jest": "^27.2.1"
   }
 }
