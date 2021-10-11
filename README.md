@@ -12,3 +12,4 @@
   - decipherMessage.js-Deciphers the secret message based on the secret key
   - ReadFile.js-Reads the File content and processes it.
   - __tests__ folder contains test files for the above mentioned functions.
+  - This is a new change
